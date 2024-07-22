@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Cafe - Place Order</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url('https://img.freepik.com/free-vector/realistic-coffee-time-background-with-coffee-cup_79603-1559.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+        }
+        .navbar {
+            background: rgba(0, 0, 0, 0.75);
+        }
+        .navbar-brand {
+            color: #FFD700 !important;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .navbar-nav a {
+            color: #FFD700 !important;
+        }
+        .navbar-nav a:hover {
+            color: #fff !important;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.75);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 1000px;
+            margin: 50px auto;
+        }
+        h1, h2 {
+            color: #FFD700;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .form-group label {
+            font-size: 1.2em;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin-top: 5px;
+        }
+        .items-list {
+            margin-bottom: 20px;
+        }
+        .items-list .item {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .items-list img {
+            max-width: 150px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            margin-bottom: 10px;
+        }
+        .items-list .item input {
+            width: 70px;
+            margin-top: 5px;
+        }
+        .btn-submit {
+            background-color: #FFD700;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+        .btn-submit:hover {
+            background-color: #FFC107;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <a class="navbar-brand" href="#">Apna Cafe</a>
+        <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="product.html">Products</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Place Your Order</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="orderType">Select Order Type</label>
+                <select id="orderType" name="orderType" required>
+                    <option value="takeaway">Take Away</option>
+                    <option value="dinein">Dine In</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact</label>
+                <input type="text" id="contact" name="contact" placeholder="Enter your contact number" required>
+            </div>
+            <div class="items-list row">
+                <div class="col-md-4 item">
+                    <img src="https://www.seriouseats.com/thmb/MS_5p-UVwIHCrr5MaXonYJajP7o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2018__06__20180613-coffee-vs-espresso-vicky-wasik-3-1500x1125-418fa2a14e7249b18040c2c34bf8569c.jpg" alt="Espresso">
+                    <div>Espresso</div>
+                    <input type="number" id="espresso" name="espresso" min="0" placeholder="Qty">
+                </div>
+                <div class="col-md-4 item">
+                    <img src="https://t3.ftcdn.net/jpg/07/78/30/44/360_F_778304437_zOTWg4hDaQIXma0R5WwY6RPh9p35yiiQ.jpg" alt="Latte">
+                    <div>Latte</div>
+                    <input type="number" id="latte" name="latte" min="0" placeholder="Qty">
+                </div>
+                <div class="col-md-4 item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1rnDrzWTpcunObA1vpcJo1eiaCMdV3QENQw&s" alt="Cappuccino">
+                    <div>Cappuccino</div>
+                    <input type="number" id="cappuccino" name="cappuccino" min="0" placeholder="Qty">
+                </div>
+                <div class="col-md-4 item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbXOyrQTlicjlRRRg0lmKT_Met22v-KBFUeA&s" alt="Croissant">
+                    <div>Croissant</div>
+                    <input type="number" id="croissant" name="croissant" min="0" placeholder="Qty">
+                </div>
+                <div class="col-md-4 item">
+                    <img src="https://kickassbaker.com/wp-content/uploads/2023/05/jumbo-blueberry-muffins-with-sour-cream-1x1-1.jpg" alt="Muffin">
+                    <div>Muffin</div>
+                    <input type="number" id="muffin" name="muffin" min="0" placeholder="Qty">
+                </div>
+                <div class="col-md-4 item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWO_myJpwjhef0w2FO5YHFl5mV3zUG6ps_XQ&s" alt="Scone">
+                    <div>Scone</div>
+                    <input type="number" id="scone" name="scone" min="0" placeholder="Qty">
+                </div>
+                <div class="col-md-4 item">
+                    <img src="https://ocakes.in/storage/app/public/images/item/item-643bee36ca0d1.jpg" alt="Chocolate Pastry">
+                    <div>Chocolate Pastry</div>
+                    <input type="number" id="chocolatePastry" name="chocolatePastry" min="0" placeholder="Qty">
+                </div>
+                <div class="col-md-4 item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ0UAQ1sShM_zdSUQpZ2RrEyqcRvQYvfsr5w&s" alt="Chicken Sandwich">
+                    <div>Chicken Sandwich</div>
+                    <input type="number" id="chickenSandwich" name="chickenSandwich" min="0" placeholder="Qty">
+                </div>
+                <div class="col-md-4 item">
+                    <img src="https://media-cdn.tripadvisor.com/media/photo-s/04/34/5f/21/big-bite.jpg" alt="Veggie Sandwich">
+                    <div>Veggie Sandwich</div>
+                    <input type="number" id="veggieSandwich" name="veggieSandwich" min="0" placeholder="Qty">
+                </div>
+                <div class="col-md-4 item">
+                    <img src="https://i0.wp.com/kalimirchbysmita.com/wp-content/uploads/2018/10/Paneer-Tikka-Sandwich-Insta-02.jpg?resize=1537%2C1024" alt="Paneer Tikka">
+                    <div>Paneer Tikka</div>
+                    <input type="number" id="paneerTikka" name="paneerTikka" min="0" placeholder="Qty">
+                </div>
+            </div>
+            <button type="submit" class="btn-submit">Submit Order</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

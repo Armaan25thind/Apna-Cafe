@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Cafe - Products</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-image: url('https://img.freepik.com/free-vector/realistic-coffee-time-background-with-coffee-cup_79603-1559.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            text-align: center;
+            color: white;
+        }
+        .header {
+            padding: 15px 0;
+        }
+        .header h1 {
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 2.5em;
+            color: #FFD700;
+        }
+        .navbar-nav a {
+            color: #FFD700 !important;
+        }
+        .navbar-nav a:hover {
+            color: #fff !important;
+        }
+        .section {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .section h2 {
+            color: #FFD700;
+            margin-bottom: 20px;
+        }
+        .collapse-header {
+            background: black;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: background 0.3s;
+        }
+        .collapse-header:hover {
+            background: #333;
+        }
+        .product {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            max-height: 200px;
+            width: auto;
+            height: auto;
+            border-radius: 15px;
+            margin: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .product h3 {
+            margin-top: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #FFD700;
+        }
+        .product p {
+            margin-top: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #fff;
+        }
+        a {
+            margin-left: 15px;
+            color: #FFD700;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.5);
+            transition: background 0.3s, color 0.3s;
+        }
+        a:hover {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.5);
+        }
+        footer h3 {
+            margin-bottom: 10px;
+            color: #FFD700;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="container header">
+        <div class="d-flex justify-content-between align-items-center">
+            <h1>Apna Cafe</h1>
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">☰</span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Our Products</h2>
+
+        <div class="section">
+            <div class="collapse-header" data-toggle="collapse" data-target="#coffees">
+                <h2>Coffees</h2>
+            </div>
+            <div id="coffees" class="collapse show">
+                <div class="row">
+                    <div class="product col-md-4">
+                        <img src="https://www.seriouseats.com/thmb/MS_5p-UVwIHCrr5MaXonYJajP7o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2018__06__20180613-coffee-vs-espresso-vicky-wasik-3-1500x1125-418fa2a14e7249b18040c2c34bf8569c.jpg" alt="Espresso">
+                        <h3>Espresso</h3>
+                        <p>A strong, rich coffee made by forcing hot water through finely-ground coffee beans.</p>
+                    </div>
+                    <div class="product col-md-4">
+                        <img src="https://t3.ftcdn.net/jpg/07/78/30/44/360_F_778304437_zOTWg4hDaQIXma0R5WwY6RPh9p35yiiQ.jpg" alt="Latte">
+                        <h3>Latte</h3>
+                        <p>A creamy coffee drink made with espresso and steamed milk, topped with a light layer of foam.</p>
+                    </div>
+                    <div class="product col-md-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1rnDrzWTpcunObA1vpcJo1eiaCMdV3QENQw&s" alt="Cappuccino">
+                        <h3>Cappuccino</h3>
+                        <p>A classic Italian coffee drink made with equal parts espresso, steamed milk, and foam.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="collapse-header" data-toggle="collapse" data-target="#pastries">
+                <h2>Pastries</h2>
+            </div>
+            <div id="pastries" class="collapse">
+                <div class="row">
+                    <div class="product col-md-3">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbXOyrQTlicjlRRRg0lmKT_Met22v-KBFUeA&s" alt="Croissant">
+                        <h3>Croissant</h3>
+                        <p>A buttery, flaky pastry that pairs perfectly with a cup of coffee.</p>
+                    </div>
+                    <div class="product col-md-3">
+                        <img src="https://kickassbaker.com/wp-content/uploads/2023/05/jumbo-blueberry-muffins-with-sour-cream-1x1-1.jpg" alt="Muffin">
+                        <h3>Muffin</h3>
+                        <p>Freshly baked muffin with a soft, moist texture and a burst of blueberries.</p>
+                    </div>
+                    <div class="product col-md-3">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWO_myJpwjhef0w2FO5YHFl5mV3zUG6ps_XQ&s" alt="Scone">
+                        <h3>Scone</h3>
+                        <p>A crumbly, lightly sweet pastry that's ideal for breakfast or a snack.</p>
+                    </div>
+                    <div class="product col-md-3">
+                        <img src="https://ocakes.in/storage/app/public/images/item/item-643bee36ca0d1.jpg" alt="Chocolate Pastry">
+                        <h3>Chocolate Pastry</h3>
+                        <p>A rich, indulgent pastry filled with decadent chocolate.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="collapse-header" data-toggle="collapse" data-target="#sandwiches">
+                <h2>Sandwiches</h2>
+            </div>
+            <div id="sandwiches" class="collapse">
+                <div class="row">
+                    <div class="product col-md-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ0UAQ1sShM_zdSUQpZ2RrEyqcRvQYvfsr5w&s" alt="Chicken Sandwich">
+                        <h3>Chicken Sandwich</h3>
+                        <p>A delicious sandwich filled with juicy chicken and fresh vegetables.</p>
+                    </div>
+                    <div class="product col-md-4">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-s/04/34/5f/21/big-bite.jpg" alt="Veggie Sandwich">
+                        <h3>Veggie Sandwich</h3>
+                        <p>A healthy sandwich packed with crisp veggies and a tangy spread.</p>
+                    </div>
+                    <div class="product col-md-4">
+                        <img src="https://i0.wp.com/kalimirchbysmita.com/wp-content/uploads/2018/10/Paneer-Tikka-Sandwich-Insta-02.jpg?resize=1537%2C1024" alt="Paneer Tikka">
+                        <h3>Paneer Tikka</h3>
+                        <p>A flavorful sandwich with marinated paneer and grilled to perfection.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h3>Contact Info</h3>
+        <p>Full Name: Armaan Singh Thind</p>
+        <p>Phone Number: 9115980647</p>
+        <p>E-Mail: armaan25thind@gmail.com</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
